@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+</head>
+<body>
+    <!-- 3;)  Finally, create a logical division in your HTML body using the following code:
+    <div id=”output”></div>
+    Output your name and where live so it appears in the logical division you just created.  -->
+    <div id="output"></div>
+
+
+    <script>
+
+        //I Put 1 to comment so that I can confirm that the output appearing is from task3. 
+        //To test task 1 you can just simply uncomment it.
+
+        
+        //1:) First, output the information to the web document using the document.write() command.
+        // document.write("Ker Joshua T. Montero");
+        // document.write("St. Catharines");
+
+        //2:) Next, output your name and where you live to the console using console.log().
+        console.log("Ker Joshua T. Montero");
+        console.log("St. Catharines");
+
+        //3: 
+        document.getElementById("output").innerHTML = "<h1>Ker Joshua T. Montero</h1>";
+        document.getElementById("output").innerHTML += "<p>St. Catharines</p>";
+
+    </script>
+</body>
+</html>

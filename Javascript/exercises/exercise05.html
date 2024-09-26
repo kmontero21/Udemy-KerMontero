@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise05</title>
+</head>
+<body>
+    <!-- 2) Display a menu of fruits and prices to the user similar to the example below -->
+    <h2>Menu</h2>
+    <p>1. Apple $.99<br/>
+    2. Pear $.79<br/>
+    3. Orange $1.19<br/>
+    4. Grapes $1.49<br/>
+    5. Grapefruit $1.79<br/>
+    6. Kiwi $.79<br/>
+    7. Apricots $1.29</p>
+    
+    <p>Result:</p>
+    <div id="output"></div>
+
+    <script>
+        // 1. Create a new .html file with script tags as demonstrated in the video. Prompt the user to enter a day of the week in
+        // numerical form where 1 is Sunday and 7 is Saturday. Based on the user’s numerical entry, use a switch...case statement
+        // to determine the day and output toe result to the console. For example, if the user inputs a 6, the output should be
+        // “Friday”.
+        let option = prompt("Enter a day of the week in numerical form WHERE 1 is Sunday and 7 is Saturday");
+
+        switch(option){
+            case "1":
+                console.log("Sunday");
+                break;
+            case "2":
+                console.log("Monday");
+                break;
+            case "3":
+                console.log("Tuesday");
+                break;
+            case "4":
+                console.log("Wednesday");
+                break;
+            case "5":
+                console.log("Thursday");
+                break;
+            case "6":
+                console.log("Friday");
+                break;
+            case "7":
+                console.log("Saturday");
+        }
+
+    //2.) Prompt the user twice. First, prompt the user for which fruit they’d like to purchase (1-7). Next prompt the user for how
+        // many of those fruits they want to purchase. Record these values to variables and then output the users order to the
+        // screen like this:
+    
+    let fruit = prompt("Which fruit you'd like to purchase");
+    let num = prompt("How many do you want to purchase?");
+    let result;
+
+    switch(fruit){
+        case "1":
+            result = parseFloat((num)*0.99).toFixed(2);
+            document.getElementById("output").innerHTML = num+" Apples $" + result;
+            break;
+         case "2":
+            result = parseFloat((num)*0.79).toFixed(2);
+            document.getElementById("output").innerHTML = num+" Pear $" + result;
+            break;
+         case "3":
+            result = parseFloat((num)*1.19).toFixed(2);
+            document.getElementById("output").innerHTML = num+" Orange $" + result;
+            break;
+         case "4":
+            result = parseFloat((num)*1.49).toFixed(2);
+            document.getElementById("output").innerHTML = num+" Grapes $" + result;
+            break;
+         case "5":
+            result = parseFloat((num)*1.79).toFixed(2);
+            document.getElementById("output").innerHTML = num+" Grapefruit $" + result;
+            break;
+         case "6":
+            result = parseFloat((num)*0.79).toFixed(2);
+            document.getElementById("output").innerHTML = num+" Kiwi $" + result;
+            break;
+         case "7":
+            result = parseFloat((num)*1.29).toFixed(2);
+            document.getElementById("output").innerHTML = num+" Apricot $" + result;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        #container {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        #red {
+            background-color: rgb(255, 0, 0);
+            margin-bottom: 20px;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        button{
+            width: 200px;
+            height: 30px;
+        }
+</style>
+</head>
+<body>
+    <div id="container">
+    <div id="red"></div>
+    <div id="blue"></div>
+    <p>Click a box to change it's background color.</p>
+    <button id="switchButton">Switch Colors</button>
+    </div>
+</body>
+<script>
+    // const randomNum = Math.round(Math.random() * 255);
+
+    var redB = document.getElementById("red");
+    var blueB = document.getElementById("blue");
+    var switchButton = document.getElementById("switchButton");
+
+    function getRandomColor() {
+        const r = Math.round(Math.random() * 255);
+        const g = Math.round(Math.random() * 255);
+        const b = Math.round(Math.random() * 255);
+
+        return rColor = `rgb(${r},${g},${b})`;
+    }
+    redB.addEventListener("click", function() {
+    // alert("RED Button was clicked!");
+    // const r = Math.round(Math.random() * 255);
+    // const g = Math.round(Math.random() * 255);
+    // const b = Math.round(Math.random() * 255);
+    // rColor = `rgb(${r},${g},${b})`;
+    redB.style.backgroundColor = getRandomColor();
+    });
+
+    blueB.addEventListener("click", function() {
+    // alert("Blue Button was clicked!");
+    blueB.style.backgroundColor = getRandomColor();
+    });
+
+    function getBackgroundColor(colorID) {
+        const color = document.getElementById(colorID);
+        const trial1 = window.getComputedStyle(color);
+        return trial1.backgroundColor;
+    }
+    switchButton.addEventListener("click", function() {
+    // alert("switchButton was clicked!");
+    // redB.style.backgroundColor = "blue";
+    // blueB.style.backgroundColor = "red";
+    const box1 = getBackgroundColor('red');
+    const box2 = getBackgroundColor('blue');
+    redB.style.backgroundColor = box2;
+    blueB.style.backgroundColor = box1;
+    //console.log(box1.style.backgroundColor);
+
+    });
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise04</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let amount = Number(prompt("How much did the member spend this month in additional charges?"));
+
+        let memberShip = 500;
+        let additionalFees = parseInt(amount);
+        let subTotal = memberShip + amount;
+        let discount;
+        let finalFee;
+        let tax = 0.0625;
+        let grandTotal;
+
+        if(amount >=2000){
+            discount = 20.0;
+            finalFee = (subTotal - (subTotal * discount / 100));
+            let taxPrice = finalFee * tax;
+            grandTotal = finalFee + taxPrice;
+            document.getElementById("output").innerHTML = "<p> Membership Fee: $" + memberShip +"</p>";
+            document.getElementById("output").innerHTML += "<p> Additional Fee: $" + amount +"</p>";
+            document.getElementById("output").innerHTML += "<p> Subtotal Fee: $" + subTotal +"</p>";
+            document.getElementById("output").innerHTML += "<p> Discount Fee: " + discount + "% </p>";
+            document.getElementById("output").innerHTML += "<p> Finall Fee Bill: $" + finalFee +"</p>";
+            document.getElementById("output").innerHTML += "<p> Tax: $" + taxPrice.toFixed(2) +"</p>";
+            document.getElementById("output").innerHTML += "<p> Grand Total: $" + grandTotal.toFixed(2) +"</p>";
+        }
+        else if(amount >= 1001){
+            discount = 15.0;
+            finalFee = (subTotal - (subTotal * discount / 100));
+            let taxPrice = finalFee * tax;
+            grandTotal = finalFee + taxPrice;
+            document.getElementById("output").innerHTML = "<p> Membership Fee: $" + memberShip +"</p>";
+            document.getElementById("output").innerHTML += "<p> Additional Fee: $" + amount +"</p>";
+            document.getElementById("output").innerHTML += "<p> Subtotal Fee: $" + subTotal +"</p>";
+            document.getElementById("output").innerHTML += "<p> Discount Fee: " + discount + "% </p>";
+            document.getElementById("output").innerHTML += "<p> Finall Fee Bill: $" + finalFee +"</p>";
+            document.getElementById("output").innerHTML += "<p> Tax: $" + taxPrice.toFixed(2) +"</p>";
+            document.getElementById("output").innerHTML += "<p> Grand Total: $" + grandTotal.toFixed(2) +"</p>";
+        }
+        else if(amount >= 501){
+            discount = 12.5;
+            finalFee = (subTotal - (subTotal * discount / 100));
+            let taxPrice = finalFee * tax;
+            grandTotal = finalFee + taxPrice;
+            document.getElementById("output").innerHTML = "<p> Membership Fee: $" + memberShip +"</p>";
+            document.getElementById("output").innerHTML += "<p> Additional Fee: $" + amount +"</p>";
+            document.getElementById("output").innerHTML += "<p> Subtotal Fee: $" + subTotal +"</p>";
+            document.getElementById("output").innerHTML += "<p> Discount Fee: " + discount + "% </p>";
+            document.getElementById("output").innerHTML += "<p> Finall Fee Bill: $" + finalFee +"</p>";
+            document.getElementById("output").innerHTML += "<p> Tax: $" + taxPrice.toFixed(2) +"</p>";
+            document.getElementById("output").innerHTML += "<p> Grand Total: $" + grandTotal.toFixed(2) +"</p>";
+        }
+        else if(amount >= 250){
+            discount = 10.0;
+            finalFee = (subTotal - (subTotal * discount / 100));
+            let taxPrice = finalFee * tax;
+            grandTotal = finalFee + taxPrice;
+            document.getElementById("output").innerHTML = "<p> Membership Fee: $" + memberShip +"</p>";
+            document.getElementById("output").innerHTML += "<p> Additional Fee: $" + amount +"</p>";
+            document.getElementById("output").innerHTML += "<p> Subtotal Fee: $" + subTotal +"</p>";
+            document.getElementById("output").innerHTML += "<p> Discount Fee: " + discount + "% </p>";
+            document.getElementById("output").innerHTML += "<p> Finall Fee Bill: $" + finalFee +"</p>";
+            document.getElementById("output").innerHTML += "<p> Tax: $" + taxPrice.toFixed(2) +"</p>";
+            document.getElementById("output").innerHTML += "<p> Grand Total: $" + grandTotal.toFixed(2) +"</p>";
+        }
+        else {
+            let taxPrice = subTotal * tax;
+            grandTotal = subTotal + taxPrice;
+            document.getElementById("output").innerHTML = "<p>LOWER THAN $250 HAS NO DISCOUNT!!</p>"
+            document.getElementById("output").innerHTML += "<p> Membership Fee: $" + memberShip +"</p>";
+            document.getElementById("output").innerHTML += "<p> Additional Fee: $" + amount +"</p>";
+            document.getElementById("output").innerHTML += "<p> Subtotal Fee: $" + subTotal +"</p>";
+            document.getElementById("output").innerHTML += "<p> Tax: $" + taxPrice.toFixed(2) +"</p>";
+            document.getElementById("output").innerHTML += "<p> Grand Total: $" + grandTotal.toFixed(2) +"</p>";
+
+        }
+    </script>
+</body>
+</html>

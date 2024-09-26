@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        let name = "Ker";       //String
+        let age = 27;           //Integer
+        let gpa = 3.89;         //Float
+        const hometown = "Barotac";
+        let isKerCool = true;    //Boolean
+
+        let family = ["Ker", "Karen", "Jay", "Jayrine", "Julianne"];  //Object Variable
+
+        //document.getElementById("output").innerHTML = name + " is " + age + " Years Old and is from " + hometown ;
+
+        gpa = 3.2;  //Reassigned the value of GPA
+        //hometown = "Niagara-On-The-Lake";   //Cannot Change value of a constant
+        
+        document.getElementById("output").innerHTML = family;
+        console.log(family);
+
+    </script>
+</body>
+</html>

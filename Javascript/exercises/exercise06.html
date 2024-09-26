@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise06</title>
+</head>
+<body>
+    
+
+    <script>
+        //1. Count from 0 to 100 by 10's
+        console.log("1.)");
+        let x = 0;
+
+        while(x < 101){
+            console.log(x);
+            x+=10;
+        }
+
+        console.log("2.)");
+        //2. Count from 100 to 0 displaying only the odd numbers.
+        let y = 100;
+
+        while(y>0){
+            if(y % 2 == 0){
+                y--;
+            }
+            else {
+                console.log(y);
+                y--;
+            }
+        }
+
+        // Print 10 rows of asterisks. In the first row print one, in the second row two and so on until you print ten asterisks in the
+        // 10th row.
+        console.log("3.)");
+        let s = 0;
+        let star = "*";
+
+        do {
+            console.log(star.repeat(s));
+            s++;
+        }
+        while(s < 11);
+
+    </script>
+</body>
+</html>
