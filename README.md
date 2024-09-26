@@ -1,1 +1,1 @@
-Udemy JavaScript Exercies
+Udemy JavaScript Exercises
